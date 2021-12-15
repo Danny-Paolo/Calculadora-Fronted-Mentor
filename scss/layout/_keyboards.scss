@@ -1,0 +1,55 @@
+@use "../utils.scss/variables" as var;
+
+.calc__options {
+  padding: var.$pad-sides;
+  background: var(--bg-keyboard);
+  border-radius: 0.5em;
+}
+
+.options__numbers {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var.$space-sides-key;
+  margin-bottom: var.$space-sides-key;
+
+  .bg-key {
+    background: var(--bg-options);
+    color: var(--color-numbers);
+    border-bottom: 4px solid var(--bg-numbers-border);
+  }
+}
+
+.key {
+  cursor: pointer;
+  text-align: center;
+  padding: var.$pad-number 0em;
+  border-radius: 0.5em;
+  font-size: 1.4em;
+  font-weight: bold;
+}
+
+.options__btn {
+  display: flex;
+  gap: var.$space-sides-key;
+}
+
+.reset,
+.equal {
+  width: 100%;
+  text-align: center;
+  padding: var.$pad-number 0em;
+  border-radius: 0.5em;
+  border: none;
+}
+
+.reset {
+  color: var(--color-btn-del);
+  background: var(--bg-btn-remove);
+  border-bottom: 4px solid var(--bg-remove-border);
+}
+
+.equal {
+  background-color: var(--bg-btn-equal);
+  color: var(--color-btn-equal);
+  border-bottom: 4px solid var(--bg-equal-boder);
+}

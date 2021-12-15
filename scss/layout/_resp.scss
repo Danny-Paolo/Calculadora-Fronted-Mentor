@@ -1,0 +1,80 @@
+@use "../utils.scss/variables" as var;
+
+.calc__entry {
+  display: flex;
+  justify-content: space-between;
+}
+
+.calc__theme {
+  display: flex;
+  font-size: 0.8em;
+}
+
+.calc__title {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  color: var(--color-main);
+}
+
+.theme__name {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  align-self: flex-end;
+  font-weight: bold;
+  color: var(--color-main);
+}
+
+.theme__options {
+  position: relative;
+  align-self: flex-end;
+}
+
+.theme__options-num {
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: -15px;
+  display: flex;
+  justify-content: space-evenly;
+  font-weight: bold;
+  color: var(--color-main);
+}
+
+// Input result
+
+[type="text"] {
+  background: var(--bg-input);
+  padding: var.$pad-sides;
+  border-radius: 0.3em;
+  color: var(--color-input);
+  text-align: right;
+  border: none;
+  font-weight: bold;
+  width: 100%;
+  font-size: 2em;
+}
+
+// Input Range
+
+[type="range"] {
+  width: 100%;
+  height: 5px;
+  -webkit-appearance: none;
+  border-radius: 20% / 50%;
+  padding: var.$pad-sides 0.3em;
+  outline: none;
+  background: var(--bg-range);
+  display: block;
+}
+
+[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background: red;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+}

@@ -1,0 +1,232 @@
+:root {
+  --bg-container: hsla(218, 67%, 18%, 0.8);
+  --bg-options: rgb(248, 248, 248);
+  --bg-input: hsla(240, 22%, 13%, 0.8);
+  --bg-keyboard: hsla(240, 20%, 21%, 0.8);
+  --bg-range: hsla(217, 68%, 7%, 0.8);
+  --bg-btn-remove: rgba(69, 69, 147, 0.868);
+  --bg-remove-border: rgba(25, 25, 79, 0.868);
+  --bg-btn-equal: rgb(209, 32, 32);
+  --bg-equal-boder: rgb(123, 31, 31);
+  --bg-numbers-border: rgb(198, 198, 198);
+  --bg-input-range: hsla(240, 11%, 18%, 0.8);
+  --color-numbers: grey;
+  --color-main: white;
+  --color-input: white;
+  --color-btn-del: white;
+  --color-btn-equal: white;
+}
+
+[theme=theme2] {
+  --bg-container: hsla(220, 8%, 93%, 0.8);
+  --bg-options: rgb(234, 228, 228);
+  --bg-keyboard: rgba(167, 167, 176, 0.687);
+  --bg-input: hsla(240, 20%, 99%, 0.93);
+  --bg-range: rgba(167, 167, 176, 0.687);
+  --bg-btn-remove: rgba(23, 123, 126, 0.868);
+  --bg-remove-border: rgba(7, 78, 80, 0.868);
+  --bg-btn-equal: rgb(209, 32, 32);
+  --bg-equal-boder: rgb(123, 31, 31);
+  --bg-numbers-border: rgb(156, 152, 152);
+  --bg-input-range: hsla(240, 11%, 18%, 0.8);
+  --color-numbers: rgb(49, 48, 48);
+  --color-main: rgb(49, 48, 48);
+  --color-input: rgb(49, 48, 48);
+  --color-btn-del: white;
+  --color-btn-equal: white;
+}
+
+[theme=theme3] {
+  --bg-container: hsl(271, 63%, 12%);
+  --bg-options: hsl(271, 66%, 23%);
+  --bg-keyboard: hsl(271, 47%, 19%);
+  --bg-input: hsl(271, 47%, 19%);
+  --bg-range: rgba(167, 167, 176, 0.687);
+  --bg-btn-remove: hsla(271, 59%, 31%, 0.854);
+  --bg-remove-border: hsl(271, 71%, 54%);
+  --bg-btn-equal: rgb(68, 241, 233);
+  --bg-equal-boder: rgb(40, 222, 207);
+  --bg-numbers-border: hsl(271, 71%, 54%);
+  --bg-input-range: hsla(240, 11%, 18%, 0.8);
+  --color-numbers: rgb(239, 239, 100);
+  --color-main: rgb(190, 190, 45);
+  --color-input: rgb(190, 190, 45);
+  --color-btn-del: white;
+  --color-btn-equal: black;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+}
+
+.wrapper {
+  max-width: 1440px;
+  width: 100%;
+  margin: auto;
+  background: var(--bg-container);
+}
+
+.calc {
+  width: 25%;
+  margin: 2rem auto;
+}
+@media screen and (max-width: 740px) {
+  .calc {
+    width: 100%;
+  }
+}
+
+.calc__res {
+  margin-bottom: 1rem;
+}
+
+.calc__entry {
+  margin-bottom: 1rem;
+}
+
+.calc__options {
+  padding: 0.8em;
+  background: var(--bg-keyboard);
+  border-radius: 0.5em;
+}
+
+.options__numbers {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.8em;
+  margin-bottom: 0.8em;
+}
+.options__numbers .bg-key {
+  background: var(--bg-options);
+  color: var(--color-numbers);
+  border-bottom: 4px solid var(--bg-numbers-border);
+}
+
+.key {
+  cursor: pointer;
+  text-align: center;
+  padding: 0.4em 0em;
+  border-radius: 0.5em;
+  font-size: 1.4em;
+  font-weight: bold;
+}
+
+.options__btn {
+  display: flex;
+  gap: 0.8em;
+}
+
+.reset,
+.equal {
+  width: 100%;
+  text-align: center;
+  padding: 0.4em 0em;
+  border-radius: 0.5em;
+  border: none;
+}
+
+.reset {
+  color: var(--color-btn-del);
+  background: var(--bg-btn-remove);
+  border-bottom: 4px solid var(--bg-remove-border);
+}
+
+.equal {
+  background-color: var(--bg-btn-equal);
+  color: var(--color-btn-equal);
+  border-bottom: 4px solid var(--bg-equal-boder);
+}
+
+.calc__entry {
+  display: flex;
+  justify-content: space-between;
+}
+
+.calc__theme {
+  display: flex;
+  font-size: 0.8em;
+}
+
+.calc__title {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  color: var(--color-main);
+}
+
+.theme__name {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  align-self: flex-end;
+  font-weight: bold;
+  color: var(--color-main);
+}
+
+.theme__options {
+  position: relative;
+  align-self: flex-end;
+}
+
+.theme__options-num {
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: -15px;
+  display: flex;
+  justify-content: space-evenly;
+  font-weight: bold;
+  color: var(--color-main);
+}
+
+[type=text] {
+  background: var(--bg-input);
+  padding: 0.8em;
+  border-radius: 0.3em;
+  color: var(--color-input);
+  text-align: right;
+  border: none;
+  font-weight: bold;
+  width: 100%;
+  font-size: 2em;
+}
+
+[type=range] {
+  width: 100%;
+  height: 5px;
+  -webkit-appearance: none;
+  border-radius: 20%/50%;
+  padding: 0.8em 0.3em;
+  outline: none;
+  background: var(--bg-range);
+  display: block;
+}
+
+[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background: red;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+}
+
+/*# sourceMappingURL=style.css.map */

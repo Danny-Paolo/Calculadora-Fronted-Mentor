@@ -1,0 +1,30 @@
+@use "../utils.scss/variables" as var;
+@use "../utils.scss/mixins" as mi;
+
+body {
+  min-height: 100vh;
+  display: flex;
+}
+
+.wrapper {
+  max-width: 1440px;
+  width: 100%;
+  margin: auto;
+  background: var(--bg-container);
+}
+
+.calc {
+  width: 25%;
+  margin: 2rem auto;
+  @media screen and (max-width: 740px) {
+    width: 100%;
+  }
+}
+
+.calc__res {
+  margin-bottom: var.$space-layout;
+}
+
+.calc__entry {
+  margin-bottom: var.$space-layout;
+}

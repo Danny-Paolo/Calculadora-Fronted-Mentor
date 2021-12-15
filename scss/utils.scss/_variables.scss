@@ -1,0 +1,72 @@
+// Theme 1
+:root {
+  --bg-container: hsla(218, 67%, 18%, 0.8);
+  --bg-options: rgb(248, 248, 248);
+  --bg-input: hsla(240, 22%, 13%, 0.8);
+  --bg-keyboard: hsla(240, 20%, 21%, 0.8);
+  --bg-range: hsla(217, 68%, 7%, 0.8);
+  --bg-btn-remove: rgba(69, 69, 147, 0.868);
+  --bg-remove-border: rgba(25, 25, 79, 0.868);
+  --bg-btn-equal: rgb(209, 32, 32);
+  --bg-equal-boder: rgb(123, 31, 31);
+  --bg-numbers-border: rgb(198, 198, 198);
+  --bg-input-range: hsla(240, 11%, 18%, 0.8);
+
+  --color-numbers: grey;
+  --color-main: white;
+  --color-input: white;
+  --color-btn-del: white;
+  --color-btn-equal: white;
+}
+
+// Theme 2
+[theme="theme2"] {
+  --bg-container: hsla(220, 8%, 93%, 0.8);
+  --bg-options: rgb(234, 228, 228);
+  --bg-keyboard: rgba(167, 167, 176, 0.687);
+  --bg-input: hsla(240, 20%, 99%, 0.93);
+  --bg-range: rgba(167, 167, 176, 0.687);
+  --bg-btn-remove: rgba(23, 123, 126, 0.868);
+  --bg-remove-border: rgba(7, 78, 80, 0.868);
+  --bg-btn-equal: rgb(209, 32, 32);
+  --bg-equal-boder: rgb(123, 31, 31);
+  --bg-numbers-border: rgb(156, 152, 152);
+  --bg-input-range: hsla(240, 11%, 18%, 0.8);
+
+  --color-numbers: rgb(49, 48, 48);
+  --color-main: rgb(49, 48, 48);
+  --color-input: rgb(49, 48, 48);
+  --color-btn-del: white;
+  --color-btn-equal: white;
+}
+
+// Theme 3
+[theme="theme3"] {
+  --bg-container: hsl(271, 63%, 12%);
+  --bg-options: hsl(271, 66%, 23%);
+  --bg-keyboard: hsl(271, 47%, 19%);
+  --bg-input: hsl(271, 47%, 19%);
+  --bg-range: rgba(167, 167, 176, 0.687);
+  --bg-btn-remove: hsla(271, 59%, 31%, 0.854);
+  --bg-remove-border: hsl(271, 71%, 54%);
+  --bg-btn-equal: rgb(68, 241, 233);
+  --bg-equal-boder: rgb(40, 222, 207);
+  --bg-numbers-border: hsl(271, 71%, 54%);
+  --bg-input-range: hsla(240, 11%, 18%, 0.8);
+
+  --color-numbers: rgb(239, 239, 100);
+  --color-main: rgb(190, 190, 45);
+  --color-input: rgb(190, 190, 45);
+  --color-btn-del: white;
+  --color-btn-equal: black;
+}
+
+// Layout
+
+$pad-sides: 0.8em;
+$space-layout: 1rem;
+
+// Keyboards
+
+$space-sides-key: 0.8em;
+$pad-number: 0.4em;

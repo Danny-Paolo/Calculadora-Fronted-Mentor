@@ -1,0 +1,17 @@
+// Sizes device
+$size: (
+  "desktop": 1440px,
+  "mobile": 740px,
+);
+
+@mixin media($value) {
+  @if (map-has-key($size, $value)) {
+    @media screen and(min-width:map-get($size,$value)) {
+      @content;
+    }
+  } @else {
+    @media screen and(min-width:$value) {
+      @content;
+    }
+  }
+}
